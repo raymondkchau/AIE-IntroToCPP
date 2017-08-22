@@ -161,20 +161,123 @@ void closed4()
 	std::cout << std::endl;
 }
 
+void findIndex(int nums[], int size, int value)
+{
+	int index = -1;
+	for (int i = 0; i < size; i++)
+	{
+		if (value == nums[i])
+		{
+			index = i;
+		}
+	}
+
+	std::cout << index << std::endl;
+
+	system("pause");
+}
+
 void open1()
 {
 	int ele1[]{ 4,5,7,8,9 };
 	int ele2[]{ 1,2,6,8,2 };
 	int ele3[]{ 3,2,1,7,5 };
 
-	findIndex(ele1, 5);
+	findIndex(ele1, 5, 5);
 	std::cout << std::endl;
-	findIndex(ele2, 5);
+	findIndex(ele2, 5, 7);
 	std::cout << std::endl;
-	findIndex(ele3, 5);
+	findIndex(ele3, 5, 5);
 	std::cout << std::endl;
+}
+
+void isUnique(int nums[], int size)
+{
+	bool unique = true;
+	for (int i = 0; i < size; i++)
+	{
+		int loop1 = i;
+		for (int i = loop1+1; i < size; i++)
+		{
+			if (nums[loop1] == nums[i])
+			{
+				unique = false;
+			}
+			std::cout << nums[loop1] << " " << nums[i] << std::endl;
+		}
+	}
+
+	if (unique == false)
+	{
+		std::cout << "This array is not unique." << std::endl;
+	}
+	else if (unique == true)
+	{
+		std::cout << "This array is a special snowflake." << std::endl;
+	}
 
 	system("pause");
+}
+
+void open2()
+{
+	int ele1[]{ 4,5,7,8,9 };
+	int ele2[]{ 1,2,6,8,2 };
+	int ele3[]{ 3,2,1,7,4 };
+
+	isUnique(ele1, 5);
+	std::cout << std::endl;
+	isUnique(ele2, 5);
+	std::cout << std::endl;
+	isUnique(ele3, 5);
+	std::cout << std::endl;
+}
+
+void backItUp(int nums[], int size)
+{
+	if (size == 5)
+	{
+		int backedUp[5]{ 0,0,0,0,0 };
+		for (int i = size; i > 0; i--)
+		{
+			int l = i;
+			for (int i = 0; i < size; i++)
+			{
+				backedUp[i] = nums[l];
+			}
+			std::cout << backedUp[i] << std::endl;
+		}
+
+	}
+	else if (size == 8)
+	{
+		int backedUp[8]{ 0,0,0,0,0,0,0,0 };
+		for (int i = size; i > 0; i--)
+		{
+			int l = i;
+			for (int i = 0; i < size; i++)
+			{
+				backedUp[i] = nums[l];
+			}
+			std::cout << backedUp[i] << std::endl;
+		}
+	}
+
+	system("pause");
+}
+
+void open3()
+{
+	int ele1[]{ 0,1,2,3,4 };
+	int ele2[]{ 4,3,4,3,4 };
+	int ele3[]{ 1,8,9,4,0,6,7,5 };
+
+	backItUp(ele1, 5);
+	std::cout << std::endl;
+	backItUp(ele2, 5);
+	std::cout << std::endl;
+	backItUp(ele3, 8);
+	std::cout << std::endl;
 }
 
 int main()
@@ -184,5 +287,7 @@ int main()
 	//closed2();
 	//closed3();
 	//closed4();
-	open1();
+	//open1();
+	//open2();
+	open3();
 }
