@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B47D4F65-F9C3-421A-9111-AA4AA2D9D9F4}</ProjectGuid>
-    <RootNamespace>My5MultiFileProjects</RootNamespace>
+    <ProjectGuid>{E6FB9DF1-8908-41E4-A72A-92A0528BF0E1}</ProjectGuid>
+    <RootNamespace>My7Arrays</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,13 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="func.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mathutils.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="func.h" />
-    <ClInclude Include="mathutils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
