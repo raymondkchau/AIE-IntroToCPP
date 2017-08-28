@@ -52,3 +52,43 @@ float dist(float x1, float y1, float x2, float y2)
 
 	return distCalc;
 }
+
+//seeds the rng with a given int and uses it for the rng
+void seedRng(int seed)
+{
+	return srand(seed);
+}
+
+//returns a random number between 1 and 100
+int rng()
+{
+	return (rand() % 100 + 1);
+}
+
+//returns a random number based on a range
+int rngRange(int range)
+{
+	return (rand() % range + 1);
+}
+
+//returns an rng boolean
+bool rngb()
+{
+	return (rand() % 2);
+
+}
+
+//takes a number as range, returns the randomly generated bool
+bool rngbChance(int range)
+{
+	int comp = (rand() % 100 + 1);
+
+	if (comp <= range)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}

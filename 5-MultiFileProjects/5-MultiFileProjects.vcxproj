@@ -110,11 +110,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dtgreet.cpp" />
     <ClCompile Include="func.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mathutils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dtgreet.h" />
     <ClInclude Include="func.h" />
     <ClInclude Include="mathutils.h" />
   </ItemGroup>
