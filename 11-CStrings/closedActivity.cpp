@@ -63,8 +63,70 @@ void closed3()
 	*/
 }
 
-void palindromeTest(char rinput[], int size)
+bool isAlpha(char query)
 {
+	return query >= 'A' && query <= 'Z' ||
+		query >= 'a' && query <= 'z'; //Asks if its between a and z and A and Z
+}
+
+char toLower(char query)
+{
+	if (query >= 'A' && query <= 'Z')
+	{
+		query += 'a' - 'A';
+	}
+	return query;
+}
+
+//What should I return? Whatever you want.
+////If no alpha-characters are in the string, will return false.
+bool isPalindrome(char string[])
+{
+	/*
+	Precondition your data so that it matches the problem. 
+	In this case, remove all non-alphabet characters and lower casing them. 
+	Dynamic approaches would skip things that don't matter while comparing
+	or just find a way to always assume you are working in lower case.
+	*/
+
+	//boob,
+	/*
+	i = 0, b, 1, o, 2, o, 3, b
+	j = 5, b, 4;    2, o, 1, b
+	*/
+
+	//starting from left and right side of string
+	int i = 0, j = strlen(string)-1;
+	//special case if the string has no characters
+	bool hasChar = false;
+
+	do
+	{
+		//find the first valid indices from left and right
+		//                         or string[i] != 0
+		while (!isAlpha(string[i]) && i < strlen(string)) i++;
+		while (!isAlpha(string[j]) && j >= 0) j--;
+
+		//if my search for characters has left me out of range
+		if (i >= strlen(string) || j < 0)
+		{
+			return hasChar; //I'm either a palindrome of have no characters
+		}
+		//compares lower case only
+		if (toLower(string[i]) != toLower(string[j]));
+		{
+			return false; //if a comparison fails, its not a palindrome
+		}
+
+		i++; //next characters
+		j--;
+		hasChar = true;
+
+	} while (j >= 0); //there are remaining characters to test
+
+	return true;
+
+	/*
 	//reverse an array
 	char temp = 0;
 	char input[80];
@@ -84,6 +146,7 @@ void palindromeTest(char rinput[], int size)
 
 	std::cout << rinput << std::endl;
 	std::cout << input << std::endl;
+	*/
 }
 
 void open1()
@@ -92,13 +155,14 @@ void open1()
 	char input2[80] = "Dinosaur";
 	char input3[80] = "boob";
 	int size;
+	char buffer[80];
 
-	size = strlen(input1);
-	palindromeTest(input1, size);
-	size = strlen(input2);
-	palindromeTest(input2, size);
-	size = strlen(input3);
-	palindromeTest(input3, size);
+	std::cin.getline(buffer, 80);
+	std::cout << isPalindrome(buffer) << std::endl;
+
+	std::cout << isPalindrome(input1) << std::endl;
+	isPalindrome(input2);
+	isPalindrome(input3);
 }
 
 void open2()
@@ -113,13 +177,17 @@ void open2()
 	size = strlen(input);
 	for (int i = 0; i < size; i++)
 	{
-		input[i] = input[i++];
+		if (input[i++] != 0)
+		{
+			input[i] = input[i++];
+		}
 	}
 
 	input[size] = temp;
 	strcat_s(input, pigLatin);
 
 	std::cout << input << std::endl;
+
 
 }
 
