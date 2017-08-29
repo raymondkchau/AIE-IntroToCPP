@@ -45,6 +45,22 @@ void closed3()
 	removeSpaces[count] = '\0';
 
 	std::cout << removeSpaces << std::endl;
+
+	/*
+	//ignores next \n character. one sits at the begining of each line.
+	//takes the entire line of input to the max limit and up to the first Enter
+	std::cin.ignore(80, '\n');
+	std::cin.getline(input, 80);
+
+	int j = 0;
+	for (int i = 0; i < strlen(input)+1; i++)
+	{
+		if(input[i] != ' ' && input[i] != '\t' && input[i] != "\n")
+		{
+			buffer[j++] = input[i];
+		}
+	}
+	*/
 }
 
 void palindromeTest(char rinput[], int size)

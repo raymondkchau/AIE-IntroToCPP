@@ -58,7 +58,7 @@ void main()
 	//closed1();
 	//closed2();
 	//closed3();
-	//open1();
+	open1();
 	open2();
 	open3();
 
