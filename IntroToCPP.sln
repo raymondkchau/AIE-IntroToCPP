@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8-ClassAndStructures", "8-C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9-AppStateManagement", "9-AppStateManagement\9-AppStateManagement.vcxproj", "{E05593DA-F7C9-4DAE-B4EC-877DA31E5D37}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11-CStrings", "11-CStrings\11-CStrings.vcxproj", "{B8F758E6-5D1C-4DD2-9E28-06681623571C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{E05593DA-F7C9-4DAE-B4EC-877DA31E5D37}.Release|x64.Build.0 = Release|x64
 		{E05593DA-F7C9-4DAE-B4EC-877DA31E5D37}.Release|x86.ActiveCfg = Release|Win32
 		{E05593DA-F7C9-4DAE-B4EC-877DA31E5D37}.Release|x86.Build.0 = Release|Win32
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Debug|x64.ActiveCfg = Debug|x64
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Debug|x64.Build.0 = Debug|x64
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Debug|x86.ActiveCfg = Debug|Win32
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Debug|x86.Build.0 = Debug|Win32
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Release|x64.ActiveCfg = Release|x64
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Release|x64.Build.0 = Release|x64
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Release|x86.ActiveCfg = Release|Win32
+		{B8F758E6-5D1C-4DD2-9E28-06681623571C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
